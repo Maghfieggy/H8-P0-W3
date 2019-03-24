@@ -3,10 +3,30 @@ function graduates (students) {
 
 var obj = {};
 
+for (var i = 0 ; i < students.length; i++){
+  if (obj[students[i].class] === undefined){
+    obj[students[i].class] = [];
 
+  }
+
+if (students[i].score > 75 ){
+
+
+obj[students[i].class].push({
+
+name : students[i].name,
+score : students[i].score, });
 
 
 }
+}
+
+return obj;
+
+}
+
+
+
 
 console.log(graduates([
   {
